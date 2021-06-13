@@ -41,9 +41,8 @@ public class UpdateClientService {
 	 * @return the client info
 	 */
 	public ClientInfo convertToClienInfoEntity(ClientInfoRequest clientInfoRequest) {
-		return new ClientInfo(clientInfoRequest.getClientName() + "-" + UUID.randomUUID().toString(),
-				clientInfoRequest.getClientName(), clientInfoRequest.getRedirectUrl(),
-				clientInfoRequest.getClientContact(), clientInfoRequest.getScope(),
+		return new ClientInfo(clientInfoRequest.getClientId(), clientInfoRequest.getClientName(),
+				clientInfoRequest.getRedirectUrl(), clientInfoRequest.getClientContact(), clientInfoRequest.getScope(),
 				clientInfoRequest.getDestinationOrg(), UUID.randomUUID().toString());
 	}
 

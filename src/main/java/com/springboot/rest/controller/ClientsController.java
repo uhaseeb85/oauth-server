@@ -80,7 +80,7 @@ public class ClientsController {
 	 */
 	@GetMapping("/clients/{id}")
     @ResponseBody
-	public ClientInfo getClient(@PathVariable String id) {
+	public ClientInfo getClient(@PathVariable("id") String id) {
 		return getClientService.getClient(id);
 	}
 	
@@ -101,9 +101,9 @@ public class ClientsController {
 	 * @param clientInfoRequest the client info request
 	 * @return the client info response
 	 */
-	@DeleteMapping("/clients")
+	@DeleteMapping("/clients/{id}")
     @ResponseBody
-	public ClientInfoResponse deleteClient(@PathVariable String id) {
+	public ClientInfoResponse deleteClient(@PathVariable("id") String id) {
 		return deleteClientService.deleteClient(id);
 	}
 
