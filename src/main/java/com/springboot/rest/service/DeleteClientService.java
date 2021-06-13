@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.springboot.rest.dao.ClientInfoRepository;
-import com.springboot.rest.model.ClientInfoRequest;
 import com.springboot.rest.model.ClientInfoResponse;
 import com.springboot.rest.model.StatusInfo;
 
