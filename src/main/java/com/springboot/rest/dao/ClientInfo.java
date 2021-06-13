@@ -35,7 +35,8 @@ public class ClientInfo {
 		this.clientSecret = clientSecret;
 	}
 
-	private Integer id;
+	@Column(name = "id", nullable = false)
+	private String id;
 	
 	@Column(name = "client_name", nullable = false)
 	private String clientName;
@@ -116,14 +117,14 @@ public class ClientInfo {
 	 */
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
 
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -154,7 +155,5 @@ public class ClientInfo {
 	public void setClientSecret(String clientSecret) {
 		this.clientSecret = clientSecret;
 	}
-
-	
 
 }

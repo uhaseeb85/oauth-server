@@ -24,7 +24,7 @@ public class GetClientService {
 	 * @param id the id
 	 * @return the client
 	 */
-	public ClientInfo getClient(Integer id) {
+	public ClientInfo getClient(String id) {
 		return clientInfoRepository.getById(id);
 	}
 

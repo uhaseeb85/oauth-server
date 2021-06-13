@@ -9,6 +9,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author uhase
  *
  */
-public interface ClientInfoRepository extends JpaRepository<ClientInfo, Integer>  {
+public interface ClientInfoRepository extends JpaRepository<ClientInfo, String>  {
 
 }

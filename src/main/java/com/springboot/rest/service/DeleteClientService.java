@@ -14,9 +14,9 @@ public class DeleteClientService {
 	@Autowired
 	private ClientInfoRepository clientInfoRepository;
 
-	public ClientInfoResponse deleteClient(ClientInfoRequest clientInfoRequest) {
+	public ClientInfoResponse deleteClient(String id) {
 		try {
-			clientInfoRepository.deleteById(clientInfoRequest.getClientId());
+			clientInfoRepository.deleteById(id);
 			return new ClientInfoResponse(new StatusInfo("1000","Delete Client Operation completed successfully."));
 		} catch (Exception e) {
 			return new ClientInfoResponse(new StatusInfo("1002","Delete Client Operation has Failed."));

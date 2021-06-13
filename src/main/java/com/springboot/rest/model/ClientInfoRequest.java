@@ -19,7 +19,7 @@ public class ClientInfoRequest {
 	
 	private String destinationOrg;
 	
-	private Integer clientId;
+	private String clientId;
 
 	/**
 	 * @return the clientName
@@ -94,14 +94,14 @@ public class ClientInfoRequest {
 	/**
 	 * @return the clientId
 	 */
-	public Integer getClientId() {
+	public String getClientId() {
 		return clientId;
 	}
 
 	/**
 	 * @param clientId the clientId to set
 	 */
-	public void setClientId(Integer clientId) {
+	public void setClientId(String clientId) {
 		this.clientId = clientId;
 	}
 

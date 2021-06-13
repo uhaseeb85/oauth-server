@@ -1,12 +1,15 @@
 package com.springboot.rest.model;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
+@JsonSerialize(include=JsonSerialize.Inclusion.NON_NULL)
 public class ClientInfoResponse {
 	
 	/**
 	 * @param clientId
 	 * @param clientSecret
 	 */
-	public ClientInfoResponse(Integer clientId, String clientSecret) {
+	public ClientInfoResponse(String clientId, String clientSecret) {
 		super();
 		this.clientId = clientId;
 		this.clientSecret = clientSecret;
@@ -20,7 +23,7 @@ public class ClientInfoResponse {
 		this.error = error;
 	}
 
-	private Integer clientId;
+	private String clientId;
 	
 	private String clientSecret;
 	
@@ -29,14 +32,14 @@ public class ClientInfoResponse {
 	/**
 	 * @return the clientId
 	 */
-	public Integer getClientId() {
+	public String getClientId() {
 		return clientId;
 	}
 
 	/**
 	 * @param clientId the clientId to set
 	 */
-	public void setClientId(Integer clientId) {
+	public void setClientId(String clientId) {
 		this.clientId = clientId;
 	}
 
