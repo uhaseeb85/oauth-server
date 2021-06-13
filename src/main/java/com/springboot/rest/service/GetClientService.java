@@ -1,6 +1,7 @@
 package com.springboot.rest.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,7 +26,8 @@ public class GetClientService {
 	 * @return the client
 	 */
 	public ClientInfo getClient(String id) {
-		return clientInfoRepository.getById(id);
+		Optional<ClientInfo> clientInfo =  clientInfoRepository.findById(id);
+		return clientInfo.get();
 	}
 
 	/**
