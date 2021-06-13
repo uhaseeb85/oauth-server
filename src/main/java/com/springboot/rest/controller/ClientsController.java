@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.springboot.rest.dao.ClientInfo;
@@ -55,7 +56,7 @@ public class ClientsController {
 	 */
 	@PostMapping("/clients")
     @ResponseBody
-	public ClientInfoResponse createClient(ClientInfoRequest clientInfoRequest) {
+	public ClientInfoResponse createClient(@RequestBody ClientInfoRequest clientInfoRequest) {
 		return createClientService.createClient(clientInfoRequest);
 	}
 	
@@ -67,7 +68,7 @@ public class ClientsController {
 	 */
 	@PatchMapping("/clients")
     @ResponseBody
-	public ClientInfoResponse updateClient(ClientInfoRequest clientInfoRequest) {
+	public ClientInfoResponse updateClient(@RequestBody ClientInfoRequest clientInfoRequest) {
 		return updateClientService.updateClient(clientInfoRequest);
 	}
 	

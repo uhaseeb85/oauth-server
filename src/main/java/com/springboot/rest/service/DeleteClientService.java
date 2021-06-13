@@ -19,6 +19,7 @@ public class DeleteClientService {
 			clientInfoRepository.deleteById(id);
 			return new ClientInfoResponse(new StatusInfo("1000","Delete Client Operation completed successfully."));
 		} catch (Exception e) {
+			e.printStackTrace();
 			return new ClientInfoResponse(new StatusInfo("1002","Delete Client Operation has Failed."));
 		}
 	}

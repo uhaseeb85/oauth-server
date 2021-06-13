@@ -5,8 +5,6 @@ package com.springboot.rest.dao;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
@@ -17,6 +15,7 @@ import javax.persistence.Id;
 public class ClientInfo {
 
 	/**
+	 * @param id
 	 * @param clientName
 	 * @param redirectUrl
 	 * @param clientContact
@@ -24,15 +23,23 @@ public class ClientInfo {
 	 * @param clientOrg
 	 * @param clientSecret
 	 */
-	public ClientInfo(String clientName, String redirectUrl, String clientContact, String scope, String clientOrg,
-			String clientSecret) {
+	public ClientInfo(String id, String clientName, String redirectUrl, String clientContact, String scope,
+			String clientOrg, String clientSecret) {
 		super();
+		this.id = id;
 		this.clientName = clientName;
 		this.redirectUrl = redirectUrl;
 		this.clientContact = clientContact;
 		this.scope = scope;
 		this.clientOrg = clientOrg;
 		this.clientSecret = clientSecret;
+	}
+
+	/**
+	 * 
+	 */
+	public ClientInfo() {
+		super();
 	}
 
 	@Column(name = "id", nullable = false)
@@ -116,7 +123,6 @@ public class ClientInfo {
 	 * @return the id
 	 */
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	public String getId() {
 		return id;
 	}
