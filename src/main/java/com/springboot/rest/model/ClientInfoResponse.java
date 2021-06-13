@@ -18,16 +18,16 @@ public class ClientInfoResponse {
 	/**
 	 * @param error
 	 */
-	public ClientInfoResponse(StatusInfo error) {
+	public ClientInfoResponse(StatusInfo status) {
 		super();
-		this.error = error;
+		this.status = status;
 	}
 
 	private String clientId;
 	
 	private String clientSecret;
 	
-	private StatusInfo error;
+	private StatusInfo status;
 
 	/**
 	 * @return the clientId
@@ -58,17 +58,17 @@ public class ClientInfoResponse {
 	}
 
 	/**
-	 * @return the error
+	 * @return the status
 	 */
-	public StatusInfo getError() {
-		return error;
+	public StatusInfo getStatus() {
+		return status;
 	}
 
 	/**
-	 * @param error the error to set
+	 * @param status the status to set
 	 */
-	public void setError(StatusInfo error) {
-		this.error = error;
+	public void setStatus(StatusInfo status) {
+		this.status = status;
 	}
 
 }
