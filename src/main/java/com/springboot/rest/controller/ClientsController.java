@@ -96,6 +96,17 @@ public class ClientsController {
 	}
 	
 	/**
+	 * Gets the all clients.
+	 *
+	 * @return the all clients
+	 */
+	@GetMapping("/ping")
+    @ResponseBody
+	public String ping() {
+		return "App is Up.";
+	}
+	
+	/**
 	 * Delete client.
 	 *
 	 * @param clientInfoRequest the client info request
