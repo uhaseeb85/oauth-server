@@ -105,7 +105,7 @@ public class ClientsController {
 	@GetMapping("/ping")
     @ResponseBody
 	public String ping() {
-		return "App is Up.";
+		return "{\"status\":\"App is up\"}";
 	}
 	
 	/**
