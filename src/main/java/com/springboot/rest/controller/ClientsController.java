@@ -102,10 +102,10 @@ public class ClientsController {
 	 *
 	 * @return the all clients
 	 */
-	@GetMapping("/ping")
+	@GetMapping("/login")
     @ResponseBody
 	public String ping() {
-		return "{\"status\":\"App is up\"}";
+		return "{\"token\":\"test123\"}";
 	}
 	
 	/**
